@@ -40,7 +40,9 @@ $config = [
         ],
         'db' => require(__DIR__ . '/db.php'),
     ],
+    'defaultRoute' => 'index',
     'params' => $params,
+    'layout' => false
 ];
 
 if (YII_ENV_DEV) {
