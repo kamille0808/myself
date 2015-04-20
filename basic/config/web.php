@@ -10,7 +10,8 @@ $config = [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => '',
-	    'enableCookieValidation' => false
+	    'enableCookieValidation' => false,
+        'enableCsrfValidation' => false,
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -38,11 +39,10 @@ $config = [
                 ],
             ],
         ],
-        'db' => require(__DIR__ . '/db.php'),
+        'db' => require(__DIR__ . '/db.php')
     ],
-    'defaultRoute' => 'index',
-    'params' => $params,
-    'layout' => false
+    'defaultRoute' => 'index',  // 默认首页
+    'params' => $params
 ];
 
 if (YII_ENV_DEV) {
